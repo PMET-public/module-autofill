@@ -6,6 +6,11 @@ define([
 
     $.widget('magentoeseAutofill.selector', {
         options: {
+            autofill: {
+                autofillListSelector: '#autofill_list',
+                selectedPersona: '',
+                personaData: ''
+            }
         },
 
         /**
@@ -13,14 +18,35 @@ define([
          * @private
          */
         _create: function () {
-            alert('Selector has been initialized');
+            if (this._isEnabled()) {
+                var events = {};
+                events['change ' + this.options.autofill.autofillListSelector] = function(e) {
+                    var selectedPersona = e.target.selectedOptions[0];
+
+                    // <option value="9" data-autofill-fields='{"firstname":"Andy","lastname":"Lewis"}'>Andy</option>
+                    // selectedPersona.dataset.autofillFields = {"firstname":"Andy","lastname":"Lewis"}
+
+                    var personaData = selectedPersona.attr('data-autofill-fields');
+                    this._setPersonaSelected(selectedPersona, personaData);
+                };
+
+                this._on(events);
+            }
         },
 
         /**
          * Check if module is enabled
          */
         _isEnabled: function() {
-            alert('Module is enabled');
+            var autofillDiv = $(this.options.autofill.autofillListSelector).parent();
+            if (autofillDiv.attr('data-autofill-enabled') == 'true') {
+                console.debug('autofill enabled');
+                return true;
+            }
+            else {
+                console.debug('autofill disabled');
+                return false;
+            }
         },
 
         /**
@@ -33,8 +59,11 @@ define([
         /**
          * Set persona selected for auto fill
          */
-        _setPersonaSelected: function() {
-            alert('Persona Selected');
+        _setPersonaSelected: function(option, persona) {
+            this.options.autofill.selectedPersona = option;
+            console.debug(option);
+            this.options.autofill.personaData = persona;
+            console.debug(persona);
         },
 
         /**

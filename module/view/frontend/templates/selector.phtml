@@ -3,10 +3,15 @@
  * @var $block \MagentoEse\AutoFill\Block\Selector
  */
 ?>
-
-<div class="autofill-toolbar" data-mage-init='{ "magentoeseAutofillSelector": {} }'>
+<?php
+$allPersonas = $block->getPersonas();
+$_helper = $this->helper('MagentoEse\AutoFill\Helper\Data');
+?>
+<div class="autofill-toolbar" data-mage-init='{ "magentoeseAutofillSelector": {} }' data-autofill-enabled='<?php echo $_helper->canSendNewOrderConfirmationEmail() ? 'true' : 'false'; ?>'>
     <select id="autofill_list" name="autofill_list">
         <option value="">Autofill Form</option>
-        <option value="9">Andy</option>
+        <?php foreach ($allPersonas as $_persona): ?>
+            <option value="<?php echo $_persona['optionValue']; ?>" data-autofill-fields='<?php echo $_persona['optionData']; ?>'><?php echo $_persona['optionLabel']; ?></option>
+        <?php endforeach; ?>
     </select>
 </div>

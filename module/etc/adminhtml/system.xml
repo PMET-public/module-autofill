@@ -91,7 +91,7 @@
                     <validate>validate-number validate-number-range number-range-2015-2100</validate>
                 </field>
                 <field id="cc_verification_number" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Credit Card Number</label>
+                    <label>Credit Card Verification Number</label>
                     <validate>validate-number validate-zero-or-greater</validate>
                 </field>
             </group>
@@ -164,7 +164,7 @@
                     <validate>validate-number validate-number-range number-range-2015-2100</validate>
                 </field>
                 <field id="cc_verification_number" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Credit Card Number</label>
+                    <label>Credit Card Verification Number</label>
                     <validate>validate-number validate-zero-or-greater</validate>
                 </field>
             </group>
@@ -237,7 +237,7 @@
                     <validate>validate-number validate-number-range number-range-2015-2100</validate>
                 </field>
                 <field id="cc_verification_number" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Credit Card Number</label>
+                    <label>Credit Card Verification Number</label>
                     <validate>validate-number validate-zero-or-greater</validate>
                 </field>
             </group>
@@ -310,7 +310,7 @@
                     <validate>validate-number validate-number-range number-range-2015-2100</validate>
                 </field>
                 <field id="cc_verification_number" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Credit Card Number</label>
+                    <label>Credit Card Verification Number</label>
                     <validate>validate-number validate-zero-or-greater</validate>
                 </field>
             </group>
@@ -383,7 +383,7 @@
                     <validate>validate-number validate-number-range number-range-2015-2100</validate>
                 </field>
                 <field id="cc_verification_number" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Credit Card Number</label>
+                    <label>Credit Card Verification Number</label>
                     <validate>validate-number validate-zero-or-greater</validate>
                 </field>
             </group>
@@ -456,7 +456,7 @@
                     <validate>validate-number validate-number-range number-range-2015-2100</validate>
                 </field>
                 <field id="cc_verification_number" translate="label" type="text" sortOrder="190" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Credit Card Number</label>
+                    <label>Credit Card Verification Number</label>
                     <validate>validate-number validate-zero-or-greater</validate>
                 </field>
             </group>
