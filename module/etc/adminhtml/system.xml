@@ -82,7 +82,7 @@
                 </field>
                 <field id="cc_month" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Credit Card Expiration Month</label>
-                    <comment>2 digits (e.g., "12")</comment>
+                    <comment>Month number without a leading 0 (e.g., "2", "7", "12")</comment>
                     <validate>validate-number validate-number-range number-range-1-12</validate>
                 </field>
                 <field id="cc_year" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -155,7 +155,7 @@
                 </field>
                 <field id="cc_month" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Credit Card Expiration Month</label>
-                    <comment>2 digits (e.g., "12")</comment>
+                    <comment>Month number without a leading 0 (e.g., "2", "7", "12")</comment>
                     <validate>validate-number validate-number-range number-range-1-12</validate>
                 </field>
                 <field id="cc_year" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -228,7 +228,7 @@
                 </field>
                 <field id="cc_month" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Credit Card Expiration Month</label>
-                    <comment>2 digits (e.g., "12")</comment>
+                    <comment>Month number without a leading 0 (e.g., "2", "7", "12")</comment>
                     <validate>validate-number validate-number-range number-range-1-12</validate>
                 </field>
                 <field id="cc_year" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -301,7 +301,7 @@
                 </field>
                 <field id="cc_month" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Credit Card Expiration Month</label>
-                    <comment>2 digits (e.g., "12")</comment>
+                    <comment>Month number without a leading 0 (e.g., "2", "7", "12")</comment>
                     <validate>validate-number validate-number-range number-range-1-12</validate>
                 </field>
                 <field id="cc_year" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -374,7 +374,7 @@
                 </field>
                 <field id="cc_month" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Credit Card Expiration Month</label>
-                    <comment>2 digits (e.g., "12")</comment>
+                    <comment>Month number without a leading 0 (e.g., "2", "7", "12")</comment>
                     <validate>validate-number validate-number-range number-range-1-12</validate>
                 </field>
                 <field id="cc_year" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -447,7 +447,7 @@
                 </field>
                 <field id="cc_month" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Credit Card Expiration Month</label>
-                    <comment>2 digits (e.g., "12")</comment>
+                    <comment>Month number without a leading 0 (e.g., "2", "7", "12")</comment>
                     <validate>validate-number validate-number-range number-range-1-12</validate>
                 </field>
                 <field id="cc_year" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -520,7 +520,7 @@
                 </field>
                 <field id="cc_month" translate="label" type="text" sortOrder="170" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Credit Card Expiration Month</label>
-                    <comment>2 digits (e.g., "12")</comment>
+                    <comment>Month number without a leading 0 (e.g., "2", "7", "12")</comment>
                     <validate>validate-number validate-number-range number-range-1-12</validate>
                 </field>
                 <field id="cc_year" translate="label" type="text" sortOrder="180" showInDefault="1" showInWebsite="0" showInStore="0">

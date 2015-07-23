@@ -113,10 +113,12 @@ define([
 
             if (autofillConfigEnabled === 'true' && isAutoFillPage) {
                 //console.debug('autofill enabled');
+                $(this.options.autofill.autofillListSelector).parent().show();
                 return true;
             }
             else {
                 //console.debug('autofill disabled');
+                $(this.options.autofill.autofillListSelector).parent().hide();
                 return false;
             }
         },
