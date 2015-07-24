@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="before.body.end">
-            <block class="MagentoEse\AutoFill\Block\Selector" name="magentoese_autofill_selector" template="selector.phtml"/>
+        <referenceContainer name="root">
+            <block class="MagentoEse\AutoFill\Block\Selector" name="magentoese_autofill_selector" after="page.wrapper" template="selector.phtml"/>
         </referenceContainer>
     </body>
 </page>
