@@ -4,14 +4,18 @@
  */
 ?>
 <?php
-$allPersonas = $block->getPersonas();
-$autoFillEnabled = $block->helpper->isAutoFillEnabled();
+$autoFillEnabled = $block->helper->isAutoFillEnabled();
 ?>
-<div class="autofill-toolbar" data-mage-init='{ "magentoeseAutofillSelector": {} }' data-autofill-enabled='<?php echo $autoFillEnabled ? 'true' : 'false'; ?>'>
-    <select id="autofill_list" name="autofill_list">
-        <option>Autofill Form</option>
-        <?php foreach ($allPersonas as $persona): ?>
-            <option value="<?php echo $persona['optionValue']; ?>" data-autofill-fields='<?php echo $persona['optionData']; ?>'><?php echo $persona['optionLabel']; ?></option>
-        <?php endforeach; ?>
-    </select>
-</div>
+<?php if ($autoFillEnabled): ?>
+    <?php
+    $allPersonas = $block->getPersonas();
+    ?>
+    <div class="autofill-toolbar" data-mage-init='{ "magentoeseAutofillSelector": {} }'>
+        <select id="autofill_list" name="autofill_list">
+            <option>Autofill Form</option>
+            <?php foreach ($allPersonas as $persona): ?>
+                <option value="<?php echo $persona['optionValue']; ?>" data-autofill-fields='<?php echo $persona['optionData']; ?>'><?php echo $persona['optionLabel']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+<?php endif ?>

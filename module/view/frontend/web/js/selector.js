@@ -113,10 +113,9 @@ define([
          * @private
          */
         _isEnabled: function() {
-            var isAutoFillPage = this._isAutoFillPage();
-            var autoFillConfigEnabled = $(this.options.autofill.autofillListSelector).parent().attr('data-autofill-enabled');
+            var isAutofillPage = this._isAutofillPage();
 
-            if (autoFillConfigEnabled === 'true' && isAutoFillPage) {
+            if (isAutofillPage) {
                 $(this.options.autofill.autofillListSelector).parent().show();
                 return true;
             } else {
@@ -129,7 +128,7 @@ define([
          * Check if current page matches pages with form fields to auto fill
          * @private
          */
-        _isAutoFillPage: function() {
+        _isAutofillPage: function() {
             var pathName = window.location.pathname;
             var pageMatchFound = null;
 

@@ -2,12 +2,10 @@
 
 namespace MagentoEse\AutoFill\Block;
 
-use \Magento\Framework\View\Element\Template;
-
 /**
  * Auto Fill Selector block
  */
-class Selector extends Template
+class Selector extends \Magento\Framework\View\Element\Template
 {
 
     // Persona Enabled
@@ -52,10 +50,10 @@ class Selector extends Template
      *
      * @var \MagentoEse\AutoFill\Helper\Data
      */
-    public $helpper;
+    public $helper;
 
     /**
-     * @param Template\Context $context
+     * @param \Magento\Framework\View\Element\Template\Context $context
      * @param \MagentoEse\AutoFill\Helper\Data $helper
      * @param array $data
      */
@@ -64,7 +62,7 @@ class Selector extends Template
         \MagentoEse\AutoFill\Helper\Data $helper,
         array $data = []
     ) {
-        $this->helpper = $helper;
+        $this->helper = $helper;
         parent::__construct($context, $data);
     }
 
