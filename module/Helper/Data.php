@@ -19,7 +19,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      *
      * @return bool
      */
-    public function canSendNewOrderConfirmationEmail()
+    public function isAutoFillEnabled()
     {
         return $this->scopeConfig->isSetFlag(
             self::CONFIG_PATH_ENABLED,

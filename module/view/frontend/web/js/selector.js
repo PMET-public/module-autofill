@@ -28,7 +28,7 @@ define([
                             ':input[name="password_confirmation"]:visible': 'password'
                         }
                     },
-                    'customer/address/edit': {
+                    'customer/address': {
                         '.form-address-edit': {
                             ':input[name="firstname"]:visible': 'firstname',
                             ':input[name="lastname"]:visible': 'lastname',
@@ -56,9 +56,13 @@ define([
                         }
                     },
                     'checkout': {
+                        '.block-customer-login': {
+                            ':input[name="username"]:visible': 'email',
+                            ':input[name="password"]': 'password'
+                        },
                         '.form-login': {
                             ':input[name="username"]:visible': 'email',
-                            ':input[name="password"]': 'password',
+                            ':input[name="password"]': 'password'
                         },
                         '#co-shipping-form': {
                             ':input[name="shippingAddress[firstname]"]:visible': 'firstname',
@@ -69,7 +73,7 @@ define([
                             ':input[name="shippingAddress[region_id]"]:visible': 'state',
                             ':input[name="shippingAddress[postcode]"]:visible': 'zip',
                             ':input[name="shippingAddress[telephone]"]:visible': 'telephone',
-                            ':input[name="shippingAddress[fax]"]:visible': 'fax',
+                            ':input[name="shippingAddress[fax]"]:visible': 'fax'
                         },
                         '#co-payment-form': {
                             ':input[name^="billingAddress"][name$="[firstname]"]:visible': 'firstname',
@@ -85,9 +89,9 @@ define([
                             ':input[name="payment[cc_number]"]:visible': 'cc_number',
                             ':input[name="payment[cc_exp_month]"]:visible': 'cc_month',
                             ':input[name="payment[cc_exp_year]"]:visible': 'cc_year',
-                            ':input[name="payment[cc_cid]"]:visible': 'cc_verification_number',
+                            ':input[name="payment[cc_cid]"]:visible': 'cc_verification_number'
                         }
-                    },
+                    }
                 }
             }
         },
@@ -106,18 +110,15 @@ define([
 
         /**
          * Check if module is enabled
+         * @private
          */
         _isEnabled: function() {
-            var isAutoFillPage = this._isAutoFillPage();
-            var autofillConfigEnabled = $(this.options.autofill.autofillListSelector).parent().attr('data-autofill-enabled');
+            var isAutofillPage = this._isAutofillPage();
 
-            if (autofillConfigEnabled === 'true' && isAutoFillPage) {
-                //console.debug('autofill enabled');
+            if (isAutofillPage) {
                 $(this.options.autofill.autofillListSelector).parent().show();
                 return true;
-            }
-            else {
-                //console.debug('autofill disabled');
+            } else {
                 $(this.options.autofill.autofillListSelector).parent().hide();
                 return false;
             }
@@ -125,31 +126,24 @@ define([
 
         /**
          * Check if current page matches pages with form fields to auto fill
+         * @private
          */
-        _isAutoFillPage: function() {
-            var pathname = window.location.pathname;
+        _isAutofillPage: function() {
+            var pathName = window.location.pathname;
             var pageMatchFound = null;
-
-            //console.debug(pathname);
-            //console.debug(this.options.autofill.map);
 
             for (var pageUrlPattern in this._getPageMap()) {
                 var re = new RegExp('.*/'+pageUrlPattern+'/*.*');
-                var found = pathname.match(re);
-
-                //console.debug(pageUrlPattern+' -> '+re+' = '+found);
+                var found = pathName.match(re);
 
                 if (found != null) {
                     pageMatchFound = pageUrlPattern;
                 }
             }
 
-            //console.debug(pageMatchFound);
-
             if (pageMatchFound != null) {
                 this.options.autofill.currentPageUrlPattern = pageMatchFound;
                 this.options.autofill.currentPageMap = this._getPageMap(pageMatchFound);
-                //console.debug(this.options.autofill.currentPageMap);
                 return true;
             } else {
                 this.options.autofill.currentPageUrlPattern = null;
@@ -160,9 +154,9 @@ define([
 
         /**
          * Get map of form fields and values
+         * @private
          */
         _getPageMap: function(pageUrlPattern) {
-
             var map = this.options.autofill.map;
 
             if (typeof pageUrlPattern !== "undefined") {
@@ -190,14 +184,11 @@ define([
 
         /**
          * Fill the form fields with selected data
+         * @private
          */
         _fillFormFields: function() {
-
             var personaData = this.options.autofill.personaData;
             var pageMap = this.options.autofill.currentPageMap;
-
-            //console.debug(personaData);
-            //console.debug(pageMap);
 
             // iterate over forms on this page to fill
             for (var formSelector in pageMap) {
@@ -207,14 +198,9 @@ define([
                     var field = $(formSelector + ' ' + fieldSelector);
                     var newValue = personaData[pageMap[formSelector][fieldSelector]];
 
-                    //console.debug(field);
-                    //console.debug(newValue);
-
                     // Fill in the field with the value from the persona selected
                     field.val(newValue);
-                    //if (field.is("select")) {
-                        field.trigger('change');
-                    //}
+                    field.trigger('change');
                 }
             }
         }

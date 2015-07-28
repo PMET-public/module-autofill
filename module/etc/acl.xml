@@ -7,7 +7,7 @@
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Magento_Ese::config_autofill" title="Magento ESE - Auto Fill Section" sortOrder="300" />
+                            <resource id="Magento_Ese::config_autofill" title="Magento ESE - Auto Fill Section" sortOrder="150" />
                         </resource>
                     </resource>
                 </resource>
