@@ -28,7 +28,7 @@ define([
                             ':input[name="password_confirmation"]:visible': 'password'
                         }
                     },
-                    'customer/address/edit': {
+                    'customer/address': {
                         '.form-address-edit': {
                             ':input[name="firstname"]:visible': 'firstname',
                             ':input[name="lastname"]:visible': 'lastname',
