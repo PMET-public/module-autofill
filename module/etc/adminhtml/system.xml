@@ -37,9 +37,8 @@
                 <field id="email_value" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Email Account</label>
                 </field>
-                <field id="password_value" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="password_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Password</label>
-                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
                 <field id="firstname_value" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>First Name</label>
@@ -110,9 +109,8 @@
                 <field id="email_value" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Email Account</label>
                 </field>
-                <field id="password_value" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="password_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Password</label>
-                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
                 <field id="firstname_value" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>First Name</label>
@@ -183,9 +181,8 @@
                 <field id="email_value" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Email Account</label>
                 </field>
-                <field id="password_value" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="password_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Password</label>
-                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
                 <field id="firstname_value" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>First Name</label>
@@ -256,9 +253,8 @@
                 <field id="email_value" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Email Account</label>
                 </field>
-                <field id="password_value" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="password_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Password</label>
-                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
                 <field id="firstname_value" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>First Name</label>
@@ -329,9 +325,8 @@
                 <field id="email_value" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Email Account</label>
                 </field>
-                <field id="password_value" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="password_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Password</label>
-                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
                 <field id="firstname_value" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>First Name</label>
@@ -402,9 +397,8 @@
                 <field id="email_value" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Email Account</label>
                 </field>
-                <field id="password_value" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="password_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Password</label>
-                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
                 <field id="firstname_value" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>First Name</label>
@@ -475,9 +469,8 @@
                 <field id="email_value" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Email Account</label>
                 </field>
-                <field id="password_value" translate="label" type="obscure" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="password_value" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Password</label>
-                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
                 </field>
                 <field id="firstname_value" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>First Name</label>
