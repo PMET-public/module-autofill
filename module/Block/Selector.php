@@ -2,12 +2,13 @@
 
 namespace MagentoEse\AutoFill\Block;
 
+use Magento\Framework\View\Element\Template;
+
 /**
  * Auto Fill Selector block
  */
-class Selector extends \Magento\Framework\View\Element\Template
+class Selector extends Template
 {
-
     // Persona Enabled
     const XML_PATH_PERSONA_ENABLED = 'magentoese_autofill/persona_%s/enable';
 
@@ -44,27 +45,6 @@ class Selector extends \Magento\Framework\View\Element\Template
      * @var []
      */
     protected $personas = [];
-
-    /**
-     * Auto Fill Helper
-     *
-     * @var \MagentoEse\AutoFill\Helper\Data
-     */
-    public $helper;
-
-    /**
-     * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \MagentoEse\AutoFill\Helper\Data $helper
-     * @param array $data
-     */
-    public function __construct(
-        \Magento\Framework\View\Element\Template\Context $context,
-        \MagentoEse\AutoFill\Helper\Data $helper,
-        array $data = []
-    ) {
-        $this->helper = $helper;
-        parent::__construct($context, $data);
-    }
 
     /**
      * Retrieve loaded category collection

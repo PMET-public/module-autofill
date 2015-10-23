@@ -3,11 +3,13 @@
 namespace MagentoEse\AutoFill\Helper;
 
 use Magento\Store\Model\Store;
+use Magento\Framework\App\Helper\AbstractHelper;
+use Magento\Store\Model\ScopeInterface;
 
 /**
  * Auto Fill module base helper
  */
-class Data extends \Magento\Framework\App\Helper\AbstractHelper
+class Data extends AbstractHelper
 {
     /**
      * Config value that indicates if Auto Fill is enabled
@@ -23,7 +25,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->scopeConfig->isSetFlag(
             self::CONFIG_PATH_ENABLED,
-            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+            ScopeInterface::SCOPE_STORE
         );
     }
 }

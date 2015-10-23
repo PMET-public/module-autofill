@@ -3,10 +3,8 @@
  * @var $block \MagentoEse\AutoFill\Block\Selector
  */
 ?>
-<?php
-$autoFillEnabled = $block->helper->isAutoFillEnabled();
-?>
-<?php if ($autoFillEnabled): ?>
+
+<?php if ($this->helper('MagentoEse\AutoFill\Helper\Data')->isAutoFillEnabled()): ?>
     <?php
     $allPersonas = $block->getPersonas();
     ?>
