@@ -91,6 +91,34 @@ define([
                             ':input[name="payment[cc_exp_year]"]:visible': 'cc_year',
                             ':input[name="payment[cc_cid]"]:visible': 'cc_verification_number'
                         }
+                    },
+                    'multishipping/checkout/login': {
+                        '.form-login': {
+                            ':input[name="login[username]"]:visible': 'email',
+                            ':input[name="login[password]"]:visible': 'password'
+                        }
+                    },
+                    'multishipping/checkout_address/newShipping/': {
+                        '.form-address-edit': {
+                            ':input[name="firstname"]:visible': 'firstname',
+                            ':input[name="lastname"]:visible': 'lastname',
+                            ':input[name="company"]:visible': 'company',
+                            ':input[name="telephone"]:visible': 'telephone',
+                            ':input[name="fax"]:visible': 'fax',
+                            ':input[name="street[]"][id="street_1"]:visible': 'address',
+                            ':input[name="city"]:visible': 'city',
+                            ':input[name="region_id"]:visible': 'state',
+                            ':input[name="postcode"]:visible': 'zip',
+                            ':input[name="country_id"]:visible': 'country'
+                        }
+                    },
+                    'multishipping/checkout/billing': {
+                        '#co-payment-form': {
+                            ':input[name="payment[cc_number]"]:visible': 'cc_number',
+                            ':input[name="payment[cc_exp_month]"]:visible': 'cc_month',
+                            ':input[name="payment[cc_exp_year]"]:visible': 'cc_year',
+                            ':input[name="payment[cc_cid]"]:visible': 'cc_verification_number'
+                        }
                     }
                 }
             }
