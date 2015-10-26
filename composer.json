@@ -2,14 +2,12 @@
     "name": "magentoese/module-autofill",
     "type": "magento2-module",
     "require": {
-        "magento/magento-composer-installer": "*"
+        "magento/framework": "*"
     },
-    "extra": {
-        "map": [
-            [
-                "module",
-                "MagentoEse/AutoFill"
-            ]
-        ]
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "MagentoEse\\AutoFill\\": ""
+        }
     }
 }
