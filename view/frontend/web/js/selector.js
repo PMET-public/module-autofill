@@ -52,44 +52,8 @@ define([
                         '#shipping-zip-form': {
                             ':input[name="country_id"]:visible': 'country',
                             ':input[name="region_id"]:visible': 'state',
-                            ':input[name="estimate_postcode"]:visible': 'zip'
-                        }
-                    },
-                    'checkout': {
-                        '.block-customer-login': {
-                            ':input[name="username"]:visible': 'email',
-                            ':input[name="password"]': 'password'
-                        },
-                        '.form-login': {
-                            ':input[name="username"]:visible': 'email',
-                            ':input[name="password"]': 'password'
-                        },
-                        '#co-shipping-form': {
-                            ':input[name="shippingAddress[firstname]"]:visible': 'firstname',
-                            ':input[name="shippingAddress[lastname]"]:visible': 'lastname',
-                            ':input[name="shippingAddress[company]"]:visible': 'company',
-                            ':input[name="shippingAddress[street][0]"]:visible': 'address',
-                            ':input[name="shippingAddress[city]"]:visible': 'city',
-                            ':input[name="shippingAddress[region_id]"]:visible': 'state',
-                            ':input[name="shippingAddress[postcode]"]:visible': 'zip',
-                            ':input[name="shippingAddress[telephone]"]:visible': 'telephone',
-                            ':input[name="shippingAddress[fax]"]:visible': 'fax'
-                        },
-                        '#co-payment-form': {
-                            ':input[name^="billingAddress"][name$="[firstname]"]:visible': 'firstname',
-                            ':input[name^="billingAddress"][name$="[lastname]"]:visible': 'lastname',
-                            ':input[name^="billingAddress"][name$="[company]"]:visible': 'company',
-                            ':input[name^="billingAddress"][name$="[street][0]"]:visible': 'address',
-                            ':input[name^="billingAddress"][name$="[city]"]:visible': 'city',
-                            ':input[name^="billingAddress"][name$="[region_id]"]:visible': 'state',
-                            ':input[name^="billingAddress"][name$="[postcode]"]:visible': 'zip',
-                            ':input[name^="billingAddress"][name$="[telephone]"]:visible': 'telephone',
-                            ':input[name^="billingAddress"][name$="[fax]"]:visible': 'fax',
-
-                            ':input[name="payment[cc_number]"]:visible': 'cc_number',
-                            ':input[name="payment[cc_exp_month]"]:visible': 'cc_month',
-                            ':input[name="payment[cc_exp_year]"]:visible': 'cc_year',
-                            ':input[name="payment[cc_cid]"]:visible': 'cc_verification_number'
+                            ':input[name="estimate_postcode"]:visible': 'zip',
+                            ':input[name="postcode"]:visible': 'zip'
                         }
                     },
                     'multishipping/checkout/login': {
@@ -118,6 +82,67 @@ define([
                             ':input[name="payment[cc_exp_month]"]:visible': 'cc_month',
                             ':input[name="payment[cc_exp_year]"]:visible': 'cc_year',
                             ':input[name="payment[cc_cid]"]:visible': 'cc_verification_number'
+                        }
+                    },
+                    'checkout': {
+                        '.block-customer-login': {
+                            ':input[name="username"]:visible': 'email',
+                            ':input[name="password"]': 'password'
+                        },
+                        '.form-login': {
+                            ':input[name="username"]:visible': 'email',
+                            ':input[name="password"]': 'password'
+                        },
+                        '#co-shipping-form': {
+                            ':input[name="shippingAddress[firstname]"]:visible': 'firstname',
+                            ':input[name="shippingAddress[lastname]"]:visible': 'lastname',
+                            ':input[name="shippingAddress[company]"]:visible': 'company',
+                            ':input[name="shippingAddress[street][0]"]:visible': 'address',
+                            ':input[name="shippingAddress[city]"]:visible': 'city',
+                            ':input[name="shippingAddress[region_id]"]:visible': 'state',
+                            ':input[name="shippingAddress[postcode]"]:visible': 'zip',
+                            ':input[name="shippingAddress[telephone]"]:visible': 'telephone',
+                            ':input[name="shippingAddress[fax]"]:visible': 'fax',
+                            ':input[name="firstname"]:visible': 'firstname',
+                            ':input[name="lastname"]:visible': 'lastname',
+                            ':input[name="company"]:visible': 'company',
+                            ':input[name="street[0]"]:visible': 'address',
+                            ':input[name="city"]:visible': 'city',
+                            ':input[name="region_id"]:visible': 'state',
+                            ':input[name="postcode"]:visible': 'zip',
+                            ':input[name="telephone"]:visible': 'telephone',
+                            ':input[name="fax"]:visible': 'fax'
+                        },
+                        '#co-payment-form': {
+                            ':input[name^="billingAddress"][name$="[firstname]"]:visible': 'firstname',
+                            ':input[name^="billingAddress"][name$="[lastname]"]:visible': 'lastname',
+                            ':input[name^="billingAddress"][name$="[company]"]:visible': 'company',
+                            ':input[name^="billingAddress"][name$="[street][0]"]:visible': 'address',
+                            ':input[name^="billingAddress"][name$="[city]"]:visible': 'city',
+                            ':input[name^="billingAddress"][name$="[region_id]"]:visible': 'state',
+                            ':input[name^="billingAddress"][name$="[postcode]"]:visible': 'zip',
+                            ':input[name^="billingAddress"][name$="[telephone]"]:visible': 'telephone',
+                            ':input[name^="billingAddress"][name$="[fax]"]:visible': 'fax',
+
+                            ':input[name="payment[cc_number]"]:visible': 'cc_number',
+                            ':input[name="payment[cc_exp_month]"]:visible': 'cc_month',
+                            ':input[name="payment[cc_exp_year]"]:visible': 'cc_year',
+                            ':input[name="payment[cc_cid]"]:visible': 'cc_verification_number',
+                            ':input[name="cc_number"]:visible': 'cc_number',
+                            ':input[name="cc_exp_month"]:visible': 'cc_month',
+                            ':input[name="cc_exp_year"]:visible': 'cc_year',
+                            ':input[name="cc_cid"]:visible': 'cc_verification_number'
+                        },
+                        '#billing-new-address-form': {
+                            ':input[name="firstname"]:visible': 'firstname',
+                            ':input[name="lastname"]:visible': 'lastname',
+                            ':input[name="company"]:visible': 'company',
+                            ':input[name="street[0]"]:visible': 'address',
+                            ':input[name="city"]:visible': 'city',
+                            ':input[name="region_id"]:visible': 'state',
+                            ':input[name="postcode"]:visible': 'zip',
+                            ':input[name="telephone"]:visible': 'telephone',
+                            ':input[name="fax"]:visible': 'fax'
                         }
                     }
                 }
@@ -166,6 +191,7 @@ define([
 
                 if (found != null) {
                     pageMatchFound = pageUrlPattern;
+                    break;
                 }
             }
 
