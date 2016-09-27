@@ -37,7 +37,7 @@ class Selector extends Template
     const XML_PATH_CC_VERIFICATION_NUMBER = 'magentoese_autofill/persona_%s/cc_verification_number';
 
     // The number of personas defined in the system configuration
-    const PERSONA_COUNT = 7;
+    const PERSONA_COUNT = 17;
 
     /**
      * Persona Data
