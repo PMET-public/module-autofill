@@ -94,7 +94,7 @@ class Selector extends Template
                     // Set the persona data for this persona
                     $this->personas[$i]['optionLabel'] = $label;
                     $this->personas[$i]['optionValue'] = $i;
-                    $this->personas[$i]['optionData'] = json_encode($optionData);
+                    $this->personas[$i]['optionData'] = json_encode($optionData,JSON_HEX_APOS);
                 }
             }
         }
