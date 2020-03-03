@@ -2,12 +2,14 @@
     "name": "magentoese/module-autofill",
     "type": "magento2-module",
     "require": {
-        "magento/framework": "*"
+        "magento/framework": "*",
+        "magento/module-store": "*"
     },
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
             "MagentoEse\\AutoFill\\": ""
         }
-    }
+    },
+    "version": "1.0.0"
 }
